@@ -1,3 +1,5 @@
+# Este es el respaldo del proyecto VIIIGames
+
 from flask import render_template
 from app_flask import app
 
