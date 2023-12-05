@@ -1,11 +1,19 @@
 {
     "_meta": {
         "hash": {
+<<<<<<< HEAD:Pipfile.lock
             "sha256": "b958c03956316bd4f778a7b4568da60f8980b2fa96c38f25b366c5def039193f"
         },
         "pipfile-spec": 6,
         "requires": {
             "python_version": "3.11"
+=======
+            "sha256": "f22fe91e7448d72471709f2793c9c5e2bc2cbb1f2bc1efd6855618d4da20103b"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.9"
+>>>>>>> d99906137d42d0dac50e2a65becd1085a3d7463a:app/Pipfile.lock
         },
         "sources": [
             {
@@ -36,6 +44,10 @@
                 "sha256:f33b385c3e80b5a26b3a5e148e6165f873c1c202423570fdf45fe34e00e5f3e5",
                 "sha256:fb931cd004a7ad36a89789caf18a54c20287ec1cd62161265344b9c4554fdb2e"
             ],
+<<<<<<< HEAD:Pipfile.lock
+=======
+            "index": "pypi",
+>>>>>>> d99906137d42d0dac50e2a65becd1085a3d7463a:app/Pipfile.lock
             "markers": "python_version >= '3.7'",
             "version": "==4.1.1"
         },
@@ -72,6 +84,7 @@
             "markers": "python_version >= '3.8'",
             "version": "==3.0.0"
         },
+<<<<<<< HEAD:Pipfile.lock
         "flask-bcrypt": {
             "hashes": [
                 "sha256:062fd991dc9118d05ac0583675507b9fe4670e44416c97e0e6819d03d01f808a",
@@ -79,6 +92,15 @@
             ],
             "index": "pypi",
             "version": "==1.0.1"
+=======
+        "importlib-metadata": {
+            "hashes": [
+                "sha256:3ebb78df84a805d7698245025b975d9d67053cd94c79245ba4b3eb694abe68bb",
+                "sha256:dbace7892d8c0c4ac1ad096662232f831d4e64f4c4545bd53016a3e9d4654743"
+            ],
+            "markers": "python_version < '3.10'",
+            "version": "==6.8.0"
+>>>>>>> d99906137d42d0dac50e2a65becd1085a3d7463a:app/Pipfile.lock
         },
         "itsdangerous": {
             "hashes": [
@@ -178,6 +200,17 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==3.0.1"
+<<<<<<< HEAD:Pipfile.lock
+=======
+        },
+        "zipp": {
+            "hashes": [
+                "sha256:0e923e726174922dce09c53c59ad483ff7bbb8e572e00c7f7c46b88556409f31",
+                "sha256:84e64a1c28cf7e91ed2078bb8cc8c259cb19b76942096c8d7b84947690cabaf0"
+            ],
+            "markers": "python_version >= '3.8'",
+            "version": "==3.17.0"
+>>>>>>> d99906137d42d0dac50e2a65becd1085a3d7463a:app/Pipfile.lock
         }
     },
     "develop": {}

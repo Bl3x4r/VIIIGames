@@ -5,10 +5,19 @@ name = "pypi"
 
 [packages]
 flask = "*"
+<<<<<<< HEAD:Pipfile
 pymysql = "*"
 flask-bcrypt = "*"
+=======
+bcrypt = "*"
+pymysql = "*"
+>>>>>>> d99906137d42d0dac50e2a65becd1085a3d7463a:app/Pipfile
 
 [dev-packages]
 
 [requires]
+<<<<<<< HEAD:Pipfile
 python_version = "3.11"
+=======
+python_version = "3.9"
+>>>>>>> d99906137d42d0dac50e2a65becd1085a3d7463a:app/Pipfile
