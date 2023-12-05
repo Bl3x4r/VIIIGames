@@ -1,5 +1,38 @@
 *{
     padding: 0;
     margin: 0;
+    list-style: none;
+    border: 1px solid black;
 }
 
+nav{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+.cont_izq{
+    flex: 2;
+    padding: 5px;
+}
+.cont_der{
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+.lista{
+    display: flex;
+    justify-self: center;
+    gap: 15px;
+}
+.item{
+    text-decoration: none;
+    color: black;
+}
+.cont-perfil-btn{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}

@@ -9,6 +9,9 @@ bcrypt = Bcrypt(app)
 def login():
     return render_template('test_creacion.html')
 
+@app.route('/inicio')
+def inicio():
+    return render_template("inicio.html")
 
 @app.route('/procesa/registro', methods= ['POST'])
 def process_register():
@@ -21,4 +24,4 @@ def process_register():
     }
     id_usuario = Usuario.crear_uno(nuevo_usuario)
     session['id_usuario'] = id_usuario
-    return render_template("inicio.html")
+    return redirect("/inicio")
