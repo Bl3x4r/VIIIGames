@@ -8,15 +8,26 @@
 <body>
     <div class="container">
         <div class="logo">
-        <img src="{{url_for('static', filename=img/Doge.jpg)}}" alt="Diseño logo">
+        <img src="{{url_for('static', filename='img/logo.jpeg')}}" alt="Diseño logo">
     </div>
     <h2>Registro</h2>
-    <form action="procesar_registro.php" method="POST">
-        <input type="text" id="username" name="username" placeholder="Usuario" required>
-        <input type="password" id="password" name="password" placeholder="Contraseña" required>
+    <form action="/procesa/login" method="POST">
+        <input type="text" id="nombre_usuario" name="nombre_usuario" placeholder="Nombre de Usuario" required>
+        {% for mensaje in get_flashed_messages(category_filter=['error_nombre_usuario']) %}
+        <div class="error alert alert-danger">
+            {{mensaje}}
+        </div>
+        {% endfor %}
+        <input type="text" id="contraseña" name="contraseña" placeholder="Contraseña" required>
+        {% for mensaje in get_flashed_messages(category_filter=['error_contraseña']) %}
+        <div class="error alert alert-danger">
+            {{mensaje}}
+        </div>
+        {% endfor %}
         <input type="submit" value="Ingresar">
+        
     </form>
-    <p>¿No tienes una cuenta? <a href="/crear/cuenta">Crear cuenta</a></p>
+    <p>¿No tienes una cuenta? <a href="/">Crear cuenta</a></p>
     </div>
 </body>
 </html>

@@ -14,9 +14,11 @@ body {
 }
 
 .logo img {
-    width: 100px;
-    margin-bottom: 20px;
+    width: 175px;
+    margin-bottom: 10px;
+    border-radius: 50px;
 }
+
 form input[type="submit"] {
     width: 80%;
     padding: 10px;

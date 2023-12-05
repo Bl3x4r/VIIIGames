@@ -13,6 +13,10 @@ def login():
 def inicio():
     return render_template("inicio.html")
 
+@app.route('/iniciar/sesion')
+def iniciar_sesion():
+    return render_template("test_Login.html")
+
 @app.route('/procesa/registro', methods= ['POST'])
 def process_register():
     if Usuario.validar_registro(request.form) == False:
@@ -24,4 +28,16 @@ def process_register():
     }
     id_usuario = Usuario.crear_uno(nuevo_usuario)
     session['id_usuario'] = id_usuario
+    return redirect("/inicio")
+
+@app.route('/procesa/login', methods=["POST"])
+def procesa_login():
+    usuario_login = Usuario.obtener_uno(request.form)
+    if usuario_login == None:
+        flash('Este usuario no exite', 'error_login')
+        return redirect("/iniciar/sesion")
+    if not bcrypt.check_password_hash(usuario_login.contraseña, request.form['contraseña']):
+        flash('Credenciales Incorrectas', 'error_login')
+        return redirect("/iniciar/sesion")
+    session['id_usuario'] = usuario_login.id
     return redirect("/inicio")

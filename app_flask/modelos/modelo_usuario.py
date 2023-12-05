@@ -10,8 +10,20 @@ class Usuario:
         self.apellido = datos['apellido']
         self.correo =  datos['correo']
         self.contraseña = datos['contraseña']
+        self.tipo_usuario = 0
         self.fecha_creacion = datos['fecha_creacion']
         self.fecha_actualizacion = datos['fecha_actualizacion']
+
+    @classmethod
+    def obtener_uno(cls, datos):
+        query = """
+                SELECT * FROM usuarios
+                WHERE nombre_usuario = %(username)s;
+                """
+        resultado = connectToMySQL(BASE_DATOS).query_db(query, datos)
+        if len(resultado) == 0:
+            return None
+        return Usuario(resultado[0])
 
     @classmethod
     def crear_uno(cls, datos):
