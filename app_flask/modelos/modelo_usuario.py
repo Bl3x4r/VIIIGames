@@ -38,8 +38,8 @@ class Usuario:
             flash('Please enter a valid email.')
         if datos['contraseña'] != datos['confirmar_contraseña']:
             valid = False
-            flash('Las contraseñas mo coinciden.', 'error_password')
+            flash('Las contraseñas mo coinciden.', 'error_contraseña')
         if len(datos['contraseña']) <8:
             valid = False
-            flash('La contraseña debe tener al menos 8 caracteres.', 'error_password')
+            flash('La contraseña debe tener al menos 8 caracteres.', 'error_contraseña')
         return valid
