@@ -19,5 +19,6 @@ def process_register():
         **request.form,
         'contraseña' : encrypted_password
     }
-    id_usuario = Usuario.create_one(nuevo_usuario)
+    id_usuario = Usuario.crear_uno(nuevo_usuario)
     session['id_usuario'] = id_usuario
+    return render_template("inicio.html")

@@ -10,10 +10,10 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="Doge.jpg" alt="Logo">
+            <img src="{{url_for('static', filename='img/Doge.jpg')}}" alt="Logo">
         </div>
         <h2>Crear cuenta</h2>
-        <form action="procesar_creacion_cuenta.php" method="POST">
+        <form action="/procesa/registro" method="POST">
             <input type="text" id="nombre_usuario" name="nombre_usuario" placeholder="Nombre de Usuario" required>
             {% for mensaje in get_flashed_messages(category_filter=['error_nombre_usuario']) %}
             <div class="error alert alert-danger">
@@ -33,13 +33,14 @@
             </div>
             {% endfor %}            
             <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+
             <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
             {% for mensaje in get_flashed_messages(category_filter=['error_correo']) %}
             <div class="error alert alert-danger">
                 {{mensaje}}
             </div>
             {% endfor %}
-            <input type="password" id="contraseña" name="contraseña" placeholder="Confrimar contraseña" required>
+            <input type="password" id="confirmar_contraseña" name="confirmar_contraseña" placeholder="Confirmar contraseña" required>
             {% for mensaje in get_flashed_messages(category_filter=['error_contraseña']) %}
             <div class="error alert alert-danger">
                 {{mensaje}}
