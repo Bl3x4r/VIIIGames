@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard.css')}}">
+    <title>Document</title>
 </head>
 <nav>
     <div class="cont_izq">
-        <h1>Dashboard</h1>
+        <h1>Perfil</h1>
     </div>
     <div class="cont_der">
         <ul class="lista">
@@ -17,7 +16,7 @@
             <li><a href="#" class="item">Tus Mensajes</a></li>
         </ul>
         <div class="cont-perfil-btn">
-            <a href="/perfil/{{ session['nombre_usuario']}}" class="item">Perfil</a>
+            <a href="#" class="item">Perfil</a>
             <form action="/cerrar/sesion" method="get">
                 <button>Cerrar Sesión</button>
             </form>
@@ -25,10 +24,11 @@
     </div>
 </nav>
 <body>
-    <div class="crear-post">
-        <a href="/crear/post">Crear Post</a>
-    </div>
-    {% for i in lista_posts %}
+    <h1> {{ usuario_perfil.nombre_usuario }} </h1>
+    <h2> {{ usuario_perfil.nombre }} </h2>
+    <h2> {{ usuario_perfil.apellido }} </h2>
+
+    {% for i in posts_perfil %}
         <div class="dash-post">
             <div class="dp-top">
                 <p>Usuario: {{ i.usuario.nombre_usuario }}</p>
@@ -40,6 +40,6 @@
             </div>
         </div>
     {% endfor %}
-
+    
 </body>
 </html>

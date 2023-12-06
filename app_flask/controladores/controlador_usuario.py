@@ -1,5 +1,6 @@
 from flask import render_template, session, redirect, request, flash
 from app_flask.modelos.modelo_usuario import Usuario
+from app_flask.modelos.modelo_post import Post
 from app_flask import app
 from flask_bcrypt import Bcrypt
 
@@ -46,6 +47,13 @@ def procesa_login():
     session['id_usuario'] = usuario_login.id
     session['nombre_usuario'] = usuario_login.nombre_usuario
     return redirect("/inicio")
+
+@app.route('/perfil/<string:pf_nombre_usuario>', methods=['GET'])
+def desplegar_perfil(pf_nombre_usuario):
+    usr_dict = { "nombre_usuario" : pf_nombre_usuario}
+    usuario_perfil = Usuario.obtener_uno(usr_dict)
+    posts_perfil = Post.obtener_posts_perfil(usr_dict)
+    return render_template("perfil.html", usuario_perfil = usuario_perfil, posts_perfil = posts_perfil)
 
 @app.route("/cerrar/sesion" , methods=["GET"])
 def procesa_logout():

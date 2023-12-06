@@ -45,4 +45,30 @@ class Post:
             post.num_comentarios = renglon['num_comentarios']
             lista_posts.append(post)
         return lista_posts
+    
+    @classmethod
+    def obtener_posts_perfil(cls, datos):               ##función para mostrar información reducida en posts
+        query = """
+                SELECT post.*, COUNT(comentarios.idcomentarios) AS num_comentarios, usuarios.* FROM post 
+                LEFT JOIN comentarios 
+                ON comentarios.post_id = post.id
+                JOIN usuarios
+                ON usuarios.id = post.usuario_id
+                WHERE nombre_usuario = %(nombre_usuario)s
+                GROUP BY post.id
+                ORDER BY post.id DESC
+                """
+        resultado = connectToMySQL(BASE_DATOS).query_db(query, datos)
+        lista_posts = []
+        for renglon in resultado:
+            post = cls(renglon)
+            usuario = {
+                **renglon,
+                'nombre' : renglon['nombre'],
+                'id' : renglon['id'],
+            }
+            post.usuario = modelo_usuario.Usuario(usuario)
+            post.num_comentarios = renglon['num_comentarios']
+            lista_posts.append(post)
+        return lista_posts
         
