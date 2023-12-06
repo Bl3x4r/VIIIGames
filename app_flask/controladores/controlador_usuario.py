@@ -7,11 +7,15 @@ bcrypt = Bcrypt(app)
 
 @app.route('/', methods= ['GET'])
 def login():
-    return render_template('test_creacion.html')
+    return redirect('/inicio')
 
 @app.route('/inicio')
 def inicio():
     return render_template("inicio.html")
+
+@app.route('/registrarse')
+def formulario_registro():
+    return render_template('test_creacion.html')
 
 @app.route('/iniciar/sesion')
 def iniciar_sesion():
@@ -42,3 +46,9 @@ def procesa_login():
     session['id_usuario'] = usuario_login.id
     session['nombre_usuario'] = usuario_login.nombre_usuario
     return redirect("/inicio")
+
+@app.route("/cerrar/sesion" , methods=["GET"])
+def procesa_logout():
+    session.clear()
+    print(session)
+    return redirect("/")

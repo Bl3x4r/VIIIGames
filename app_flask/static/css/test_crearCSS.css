@@ -1,6 +1,8 @@
 body {
     background-color: #9b836ad0;
     font-family: Arial, sans-serif;
+    display: flex;
+    padding: 0 25px;
 }
 
 .container {
@@ -14,7 +16,7 @@ body {
 }
 
 .logo img {
-    width: 175px;
+    width: 150px;
     margin-bottom: 10px;
     border-radius: 50px;
 }
@@ -43,4 +45,15 @@ form input[type="email"] {
     border-radius: 3px;
     color: #fff;
     box-sizing: border-box;
+}
+.btn-inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    background-color: #6b4000d2;
+    color: #fff;
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
 }
