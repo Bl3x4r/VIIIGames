@@ -12,7 +12,8 @@ def login():
 
 @app.route('/inicio')
 def inicio():
-    return render_template("inicio.html")
+    lista_posts = Post.obtener_post_dashboard()
+    return render_template("inicio.html", lista_posts = lista_posts)
 
 @app.route('/registrarse')
 def formulario_registro():
