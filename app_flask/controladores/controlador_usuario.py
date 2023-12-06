@@ -59,5 +59,4 @@ def desplegar_perfil(pf_nombre_usuario):
 @app.route("/cerrar/sesion" , methods=["GET"])
 def procesa_logout():
     session.clear()
-    print(session)
     return redirect("/")
