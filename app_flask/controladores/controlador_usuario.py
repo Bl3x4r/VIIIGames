@@ -25,13 +25,14 @@ def iniciar_sesion():
 @app.route('/procesa/registro', methods= ['POST'])
 def process_register():
     if Usuario.validar_registro(request.form) == False:
-        return render_template('test_login.html')
+        return render_template('test_creacion.html')
     encrypted_password = bcrypt.generate_password_hash(request.form['contraseña'])
     nuevo_usuario = {
         **request.form,
         'contraseña' : encrypted_password
     }
     id_usuario = Usuario.crear_uno(nuevo_usuario)
+    
     session['id_usuario'] = id_usuario
     return redirect("/inicio")
 

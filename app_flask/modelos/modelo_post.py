@@ -5,6 +5,7 @@ from app_flask import BASE_DATOS, EMAIL_REGEX
 
 class Post:
     def __init__(self, datos):
+        self.id = datos['id']
         self.nombre_post = datos ['nombre_post']
         self.descripcion_post = datos ['descripcion_post']
         self.fecha_creacion = datos['fecha_creacion']
