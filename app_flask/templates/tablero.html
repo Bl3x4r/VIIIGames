@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Post</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/crear_post.css')}}">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard.css')}}">
 </head>
-<nav nav-hdr>
+<nav>
     <div class="cont_izq">
-        <h1>Crear Nuevo Post</h1>
+        <h1>Dashboard</h1>
     </div>
-    <div class="cont-der">
+    <div class="cont_der">
         <ul class="lista">
             <li><a href="/inicio" class="item">Inicio</a></li>
             <li><a href="#" class="item">Eventos</a></li>
@@ -25,18 +25,20 @@
     </div>
 </nav>
 <body>
-    <div>
-        <form action="/procesar/creacion_post" method="POST">
-            <div>
-                <label for="nombre_post">Título del Post</label>
-                <input type="text" name="nombre_post">
-            </div>
-            <div>
-                <label for="descripcion_post">Descripción</label>
-                <textarea name="descripcion_post"></textarea>
-            </div>
-            <button>Crear Post</button>
-        </form>
+    <div class="crear-post">
+        <a href="/crear/post">Crear Post</a>
     </div>
+    {% for i in lista_posts %}
+        <div>
+            <p>Usuario: {{ i.usuario.nombre_usuario }}</p>
+        </div>
+        <div>
+            <h2>{{ i.nombre_post }}</h2>
+        </div>
+        <div>
+            {{ i.descripcion_post }}
+        </div>
+    {% endfor %}
+
 </body>
 </html>

@@ -18,4 +18,9 @@ def crear_post():
     Post.crear_post(nuevo_post)
     return redirect('/inicio')
 
-    
+@app.route('/dashboard', methods=['GET'])
+def renderizar_dashboard_posts():
+    if 'id_usuario' not in session:
+        return redirect('/')
+    lista_posts = Post.obtener_post_dashboard()
+    return render_template('tablero.html', lista_posts = lista_posts)
