@@ -18,7 +18,7 @@
             {{mensaje}}
         </div>
         {% endfor %}
-        <input type="text" id="contraseña" name="contraseña" placeholder="Contraseña" required>
+        <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
         {% for mensaje in get_flashed_messages(category_filter=['error_contraseña']) %}
         <div class="error alert alert-danger">
             {{mensaje}}

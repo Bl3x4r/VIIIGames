@@ -2,19 +2,48 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+html{
+    display: flex;
+    flex-direction: column;
+}
+body{
+    background-color: #9b836ad0;
+}
+a{
+    font-size: 1.2rem;
+}
+
+/* 
+
+    Header de la Pagina
+
+*/
+.logo{
+    height: 75px;
+    border-radius: 20px;
 }
 
 nav{
     display: flex;
     align-items: center;
+    height: 100px;
     gap: 50px;
+    justify-self: center;
     padding: 10px;
-    font-size: 1.2rem;
+    margin: 0 16px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #EAD94C;
+    box-shadow: 1px 1px #EAD94C;
+    background-color: #C47335;
 }
 .cont_izq{
     flex: 2;
     padding: 5px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
 .cont_der{
     flex: 3;
@@ -35,4 +64,82 @@ nav{
     display: flex;
     gap: 50px;
     align-items: center;
+}
+/* 
+
+    Cuerpo de la Pagina
+
+*/
+.cuerpo{
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 32px;
+}
+.titulos-cuerpo{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 100px;
+    margin: 15px;
+    padding: 25px;
+    font-size: 1.5rem;
+    /* border: 1px solid blue; */
+}
+.cont-eventos,.cont-posts{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.cont-eventos{
+    height: 100px;
+    padding: 16px;
+}
+.cont-posts{
+    height: 150px;
+    padding: 16px;
+}
+
+/* 
+
+    Footer de la Pagina
+
+*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border-top: 2px solid gold;
+    background-color: #56351E;
+}
+.titulo-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    font-size: 1.5rem;
+}
+.cont, .cont-footer-izq,.cont-footer-der{
+    display: flex;
+    justify-content: space-around;
+}
+.cont-footer-izq, .cont-footer-der{
+    padding: 8px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+} 
+/*
+.cont-footer-der{
+    border: 1px solid red;
+}
+.cont-footer-izq{
+    border: 1px solid blueviolet;
+} 
+*/
+
+.list-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
