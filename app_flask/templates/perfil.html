@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Perfil</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/perfil.css')}}">
 </head>
 <nav>
     <div class="cont_izq">
@@ -24,9 +25,14 @@
     </div>
 </nav>
 <body>
-    <h1> {{ usuario_perfil.nombre_usuario }} </h1>
-    <h2> {{ usuario_perfil.nombre }} </h2>
-    <h2> {{ usuario_perfil.apellido }} </h2>
+    <div>
+        <h1> {{ usuario_perfil.nombre_usuario }} </h1>
+        <div class="nombre">
+            <h2> {{ usuario_perfil.nombre }} </h2> 
+            <h2> {{ usuario_perfil.apellido }} </h2>
+        </div>
+    </div>
+    
 
     {% for i in posts_perfil %}
         <div class="dash-post">
