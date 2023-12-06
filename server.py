@@ -1,4 +1,4 @@
-from app_flask.controladores import controlador_usuario
+from app_flask.controladores import controlador_usuario, controlador_post
 from app_flask import app
 from flask import render_template
 
