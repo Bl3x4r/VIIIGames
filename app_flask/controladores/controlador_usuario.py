@@ -40,4 +40,5 @@ def procesa_login():
         flash('Credenciales Incorrectas', 'error_login')
         return redirect("/iniciar/sesion")
     session['id_usuario'] = usuario_login.id
+    session['nombre_usuario'] = usuario_login.nombre_usuario
     return redirect("/inicio")

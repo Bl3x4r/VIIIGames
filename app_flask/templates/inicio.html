@@ -6,46 +6,74 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/inicio.css')}}">
 </head>
-<nav nav-hdr>
-    <div class="cont_izq">
-        <h1>Inicio</h1>
-    </div>
-    <div class="cont_der">
-        <ul class="lista">
-            <li><a href="#" class="item">Posts</a></li>
-            <li><a href="#" class="item">Eventos</a></li>
-            <li><a href="#" class="item">Tus Mensajes</a></li>
-        </ul>
-        <div class="cont-perfil-btn">
-            <a href="#" class="item">Perfil</a>
-            <form action="/cerrar/sesion" method="get">
-                <button>Cerrar Sesión</button>
-            </form>
-        </div>
-    </div>
-</nav>
 <body>
-
-    <h3>Hola mundo</h3>
-</body>
-<footer>
-    <div class="cont cont-footer">
-        <h2>Nosotros</h2>
-        <div class="cont cont-nav-btm-izq">
-            <h3>Contactanos</h3>
+    <!-- 
+        Header de la pagina
+     -->
+    <nav>
+        <div class="cont_izq">
+            <h1>Inicio</h1>
+            <img src="{{url_for('static', filename='img/logo.jpeg')}}" alt="Logo de VIIIGames" class="img logo">
+        </div>
+        <div class="cont_der">
+            <ul class="lista">
+                <li><a href="#" class="item">Posts</a></li>
+                <li><a href="#" class="item">Eventos</a></li>
+                <li><a href="#" class="item">Tus Mensajes</a></li>
+            </ul>
+            <div class="cont-perfil-btn">
+                <a href="#" class="item">Perfil</a>
+                <form action="/cerrar/sesion" method="get">
+                    <button>Cerrar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- 
+        Cuerpo de la pagina
+     -->
+    <div class="cuerpo">
+        <div class="titulos-cuerpo">
+        <h3>Eventos</h3>
+        </div>
+        
+        <div class="cont-cuerpo cont-eventos">
             <ul>
-                <li><a href="#">Conviertete en Socio</a></li>
-                <li><a href="#">Conocenos</a></li>
+                <li>Aqui van los eventos</li>
             </ul>
         </div>
-        <div class="cont cont-nav-btm-der">
-            <h3>Acerca de Nosotros</h3>
+        <div class="titulos-cuerpo">
+            <h3>Publicaciones</h3>
+        </div>
+        <div class="cont-cuerpo cont-posts">
             <ul>
-                <li><a href="#">Misión</a></li>
-                <li><a href="#">Visión</a></li>
+                <li>Aqui van los posts</li>
             </ul>
         </div>
     </div>
-
-</footer>
+    <!-- 
+        Footer de la pagina
+     -->
+    <footer>
+        <div class="titulo-footer">
+            <h2>Nosotros</h2>
+        </div>
+        <div class="cont cont-footer">
+            <div class="cont cont-footer-izq">
+                <h3 class="titulo-footer">Contactanos</h3>
+                <ul class="list list-footer">
+                    <li><a href="#" class="item">Conviertete en Socio</a></li>
+                    <li><a href="/conocer/equipo" class="item">Conoce al equipo</a></li>
+                </ul>
+            </div>
+            <div class="cont cont-footer-der">
+                <h3 class="titulo-footer">Acerca de Nosotros</h3>
+                <ul class="list list-footer">
+                    <li><a href="#" class="item">Misión</a></li>
+                    <li><a href="#" class="item">Visión</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
