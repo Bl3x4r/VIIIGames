@@ -3,13 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Crear Post</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/crear_post.css')}}">
 </head>
+<nav nav-hdr>
+    <div class="cont_izq">
+        <h1>Crear Nuevo Post</h1>
+    </div>
+    <div class="cont-der">
+        <ul class="lista">
+            <li><a href="/inicio" class="item">Volver</a></li>
+            <li><a href="#" class="item">Eventos</a></li>
+            <li><a href="#" class="item">Tus Mensajes</a></li>
+        </ul>
+        <div class="cont-perfil-btn">
+            <a href="#" class="item">Perfil</a>
+            <form action="/cerrar/sesion" method="get">
+                <button>Cerrar Sesión</button>
+            </form>
+        </div>
+    </div>
+</nav>
 <body>
-    <h1>Crear Nuevo Post</h1>
     <div>
         <form action="/procesar/creacion_post" method="POST">
-
+            <div>
+                <label for="nombre_post">Título del Post</label>
+                <input type="text" name="nombre_post">
+            </div>
+            <div>
+                <label for="descripcion_post">Descripción</label>
+                <textarea name="descripcion_post"></textarea>
+            </div>
+            <button>Crear Post</button>
         </form>
     </div>
 </body>

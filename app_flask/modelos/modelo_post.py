@@ -9,7 +9,6 @@ class Post:
         self.fecha_creacion = datos['fecha_creacion']
         self.fecha_actualizacion = datos['fecha_actualizacion']
         self.usuario_id = datos['usuario_id']
-        self.usuario = None
     
     @classmethod
     def crear_post(cls, datos):

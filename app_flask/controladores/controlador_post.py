@@ -11,7 +11,8 @@ def formulario_post():
 @app.route('/procesar/creacion_post', methods=['POST'])
 def crear_post():
     nuevo_post= {
-        **request.form,
+        'nombre_post': request.form['nombre_post'],
+        'descripcion_post': request.form['descripcion_post'],
         'usuario_id': session['id_usuario']
     }
     Post.crear_post(nuevo_post)

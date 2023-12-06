@@ -18,7 +18,7 @@ class Usuario:
     def obtener_uno(cls, datos):
         query = """
                 SELECT * FROM usuarios
-                WHERE nombre_usuario = %(username)s;
+                WHERE nombre_usuario = %(nombre_usuario)s;
                 """
         resultado = connectToMySQL(BASE_DATOS).query_db(query, datos)
         if len(resultado) == 0:
