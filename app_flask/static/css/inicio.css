@@ -16,6 +16,14 @@ body{
 a{
     font-size: 1.2rem;
 }
+button {
+    background-color: #fff;
+    color: #C47335;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 /* 
 
@@ -57,6 +65,7 @@ nav{
 .lista{
     display: flex;
     justify-self: center;
+    align-items: center;
     gap: 15px;
 }
 .item{
@@ -118,7 +127,6 @@ nav{
     display: flex;
     flex-direction: column;
     background-color: #848482;
-    border: 3px solid #EAD94C;
     border-radius: 20px;
     box-shadow: 2px 2px #BEBEBE;
     padding: 8px;

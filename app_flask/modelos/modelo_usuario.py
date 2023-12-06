@@ -28,8 +28,8 @@ class Usuario:
     @classmethod
     def crear_uno(cls, datos):
         query = """
-                INSERT INTO usuarios(nombre_usuario, nombre, apellido, correo, contraseña)
-                VALUES (%(nombre_usuario)s,%(nombre)s,%(apellido)s,%(correo)s,%(contraseña)s);
+                INSERT INTO usuarios(nombre_usuario, nombre, apellido, correo, contraseña, tipo_usuario)
+                VALUES (%(nombre_usuario)s,%(nombre)s,%(apellido)s,%(correo)s,%(contraseña)s , 1);
                 """
         return connectToMySQL(BASE_DATOS).query_db(query, datos)
 
@@ -50,7 +50,7 @@ class Usuario:
             flash('Please enter a valid email.')
         if datos['contraseña'] != datos['confirmar_contraseña']:
             valid = False
-            flash('Las contraseñas mo coinciden.', 'error_contraseña')
+            flash('Las contraseñas no coinciden.', 'error_contraseña')
         if len(datos['contraseña']) <8:
             valid = False
             flash('La contraseña debe tener al menos 8 caracteres.', 'error_contraseña')
