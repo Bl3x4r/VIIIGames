@@ -55,19 +55,12 @@ a {
     gap: 20px;
 }
 
-button {
-    background-color: #fff;
-    color: #C47335;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-}
 
 button:hover {
     background-color: #ddd;
 }
 
-form {
+#crear-post {
     max-width: 400px;
     margin: 20px auto;
     padding: 20px;
@@ -89,9 +82,18 @@ textarea {
     box-sizing: border-box;
 }
 
-button {
+#crear-post button {
     background-color: #C47335;
     color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #fff;
+    color: #C47335;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;

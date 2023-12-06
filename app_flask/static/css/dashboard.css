@@ -58,8 +58,9 @@ a {
 button {
     background-color: #fff;
     color: #C47335;
+    padding: 10px 20px;
     border: none;
-    padding: 8px 12px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -79,6 +80,12 @@ button:hover {
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
+}
+
+.dash-post{
+    display: flex;
+    background-color: #756e6e;
+    border-radius: 5px;
 }
 
 .crear-post a:hover {

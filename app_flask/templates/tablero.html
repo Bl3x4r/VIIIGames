@@ -29,14 +29,15 @@
         <a href="/crear/post">Crear Post</a>
     </div>
     {% for i in lista_posts %}
-        <div>
-            <p>Usuario: {{ i.usuario.nombre_usuario }}</p>
-        </div>
-        <div>
-            <h2>{{ i.nombre_post }}</h2>
-        </div>
-        <div>
-            {{ i.descripcion_post }}
+        <div class="dash-post">
+            <div class="dp-top">
+                <p>Usuario: {{ i.usuario.nombre_usuario }}</p>
+                <p>{{ i.fecha_creacion }}</p>
+            </div>
+            <div class="dp-btm">
+                <h2>{{ i.nombre_post }}</h2>
+                {{ i.descripcion_post }}
+            </div>
         </div>
     {% endfor %}
 
