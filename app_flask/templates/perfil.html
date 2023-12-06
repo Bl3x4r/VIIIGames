@@ -31,24 +31,25 @@
             <h2> {{ usuario_perfil.apellido }} </h2>
         </div>
     </div>
-    
-    <h1>Tus Publicaciones</h1>
+    <div>
+    </div>
+        <h1>Tus Publicaciones</h1>
         {% if posts_perfil|length == 0 %}
             <h1>No tienes publicaciones...</h1>
         {% else %}
-    {% for i in posts_perfil %}
-        <div class="dash-post">
-            <div class="dp-top">
-                <p>Usuario: {{ i.usuario.nombre_usuario }}</p>
-                <p>{{ i.fecha_creacion }}</p>
-            </div>
-            <div class="dp-btm">
-                <h2>{{ i.nombre_post }}</h2>
-                {{ i.descripcion_post }}
-            </div>
-        </div>
-    {% endfor %}
-    {%endif%}
-    
+            {% for i in posts_perfil %}
+                <div class="dash-post">
+                    <div class="dp-top">
+                        <p>Usuario: {{ i.usuario.nombre_usuario }}</p>
+                        <p>{{ i.fecha_creacion }}</p>
+                    </div>
+                    <div class="dp-btm">
+                        <h2>{{ i.nombre_post }}</h2>
+                        {{ i.descripcion_post }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
 </body>
 </html>
