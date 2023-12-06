@@ -29,7 +29,6 @@ class Post:
                 ON comentarios.post_id = post.id
                 JOIN usuarios
                 ON usuarios.id = post.usuario_id
-                WHERE post.id < 5
                 GROUP BY post.id
                 ORDER BY post.id DESC
                 """
