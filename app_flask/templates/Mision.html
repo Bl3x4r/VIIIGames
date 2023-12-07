@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nuestra Misión</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/mision_CSS.css')}}">
+</head>
+<header>
+    <nav>
+        <div class="cont_izq">
+            <img src="{{url_for('static', filename='img/logo.jpeg')}}" alt="Logo de VIIIGames" class="img logo">
+            <h1>Inicio</h1>
+        </div>
+        <div class="cont_der">
+            <ul class="lista">
+                <li><a href="/dashboard" class="item">Posts</a></li>
+                <li><a href="#" class="item">Eventos</a></li>
+                <li><a href="#" class="item">Tus Mensajes</a></li>
+            </ul>
+            <div class="cont-perfil-btn">
+                {% if 'nombre_usuario' not in session %}
+                <form action="/iniciar/sesion" method="get">
+                    <button>Iniciar Sesión</button>
+                </form>
+                <form action="/registrarse" method="get">
+                    <button>Registrarse</button>
+                </form>
+                {%else%}
+                    <a href="/perfil/{{session['nombre_usuario']}}" class="item">Perfil</a>
+                    <form action="/cerrar/sesion" method="get">
+                        <button>Cerrar Sesión</button>
+                    </form>
+                {%endif%}
+            </div>
+        </div>
+    </nav>
+</header>
+<body>
+    <div class="container">
+        <h2>Nuestra Misión:</h2>
+        <p>Nuestra misión es crear una experiencia integral al facilitar la planificación de eventos y partidas. Nos esforzamos por ofrecer un entorno donde la participación va más allá de la simple asistencia. Queremos ser un catalizador de la colaboración creativa y la construcción colectiva de experiencias inolvidables. Al elegirnos, disfrutarás de una experiencia única y sin complicaciones, ya que somos jugadores antes que developers y nos comprometemos íntimamente con el proyecto.</p>
+    </div>
+</body>
+</html>

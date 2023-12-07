@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #9b836ad0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    padding: 40px;
+    text-align: justify;
+    background-color: #6b4000d2;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    margin-top: 100px; /* Agregado para separar el contenido del encabezado */
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.logo {
+    height: 75px;
+    border-radius: 20px;
+}
+
+nav{
+    position: fixed; /* Cambiado para fijar la barra de navegación en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Modificado para ocupar el ancho completo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #EAD94C;
+    border-left: 1px solid #EAD94C;
+    box-shadow: 2px 2px #EAD94C;
+    background-color: #C47335;
+    z-index: 1000;
+}
+
+.cont_izq {
+    flex: 2;
+    padding: 5px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.cont_der {
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.lista {
+    display: flex;
+    gap: 15px;
+}
+
+.item {
+    text-decoration: none;
+    color: black;
+}
+
+.cont-perfil-btn {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
