@@ -55,14 +55,19 @@ a {
     gap: 20px;
 }
 
+.cont-cuerpo{
+    display: flex;
+    width: 100%;
+}
 
 button:hover {
     background-color: #ddd;
 }
 
 #crear-post {
-    max-width: 400px;
-    margin: 20px auto;
+    max-width: 800px;
+    margin: 20px auto; 
+    width: 100%;
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -79,6 +84,7 @@ textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 16px;
+    resize: none;
     box-sizing: border-box;
 }
 
