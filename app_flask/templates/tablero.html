@@ -30,13 +30,20 @@
     </div>
     {% for i in lista_posts %}
         <div class="dash-post">
-            <div class="dp-top">
-                <p>Usuario: {{ i.usuario.nombre_usuario }}</p>
+            <div class="dp-left">
+                <img src="" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                <p>{{ i.usuario.nombre_usuario }}</p>
                 <p>{{ i.fecha_creacion }}</p>
             </div>
-            <div class="dp-btm">
-                <h2>{{ i.nombre_post }}</h2>
-                {{ i.descripcion_post }}
+            <div class="dp-right">
+                <div class="dp-td">
+                    <h2>{{ i.nombre_post }}</h2>
+                    <p>{{ i.descripcion_post }}</p>
+                </div>
+                <div class="dp-comentarios">
+                    <img src="" alt="Ícono Comentarios">
+                    {{ i.num_comentarios }}
+                </div>
             </div>
         </div>
     {% endfor %}
