@@ -144,6 +144,7 @@ nav{
     width: 200px;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 .dp-right {
     display: flex;
