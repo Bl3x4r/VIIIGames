@@ -49,11 +49,22 @@
             <div class="titulos-cuerpo">
                 <h3>Eventos</h3>
             </div>
-            
-            <div class="cont-eventos">
-                <ul>
-                    <li>Aqui van los eventos</li>
-                </ul>
+            <div class="cont-posts">
+                {% for e in lista_eventos %}
+                <div class="dash-post">
+                    <div class="dp-left">
+                        <img src="" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                        <p>{{ e.usuario.nombre_usuario }}</p>
+                        <p>{{ e.fecha_creacion }}</p>
+                    </div>
+                    <div class="dp-right">
+                        <div class="dp-td">
+                            <h2>{{ e.nombre_evento }}</h2>
+                            <p>{{ e.descripcion_evento }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </div>
         <div class="cont-cuerpo">
