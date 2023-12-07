@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/post.css')}}">
+</head>
+<body>
+    <nav>
+        <div class="cont_izq">
+            <h1>Perfil</h1>
+        </div>
+        <div class="cont_der">
+            <ul class="lista">
+                <li><a href="/inicio" class="item">Inicio</a></li>
+                <li><a href="#" class="item">Eventos</a></li>
+                <li><a href="#" class="item">Tus Mensajes</a></li>
+            </ul>
+            <div class="cont-perfil-btn">
+                {% if 'nombre_usuario' not in session %}
+                <form action="/iniciar/sesion" method="get">
+                    <button>Iniciar Sesión</button>
+                </form>
+                <form action="/registrarse" method="get">
+                    <button>Registrarse</button>
+                </form>
+                {%else%}
+                    <a href="/perfil/{{session['nombre_usuario']}}" class="item">Perfil</a>
+                    <form action="/cerrar/sesion" method="get">
+                        <button>Cerrar Sesión</button>
+                    </form>
+                {%endif%}
+            </div>
+        </div>
+    </nav>
+    <div class="cuerpo">
+        <div class="cont-cuerpo" id="publicacion">
+            <div class="publicacion-izq">
+                <img src="" alt="imagen de perfil">
+                <h3>Nombre de Usuario</h3>
+                <span>Se unió el: *fecha creacion de perfil*</span>
+            </div>
+            <div class="publicacion-der">
+                <h2>Título de Publicacion</h2>
+                <p>Descripción de publicación</p>
+                <span>Fecha de publicación</span>
+            </div>
+        </div>
+        <div class="cont-cuerpo">
+            <form action="#">
+                <textarea name="comentario-usuario" placeholder="Escribe un comentario..."></textarea>
+                <button>Enviar comentario</button>
+            </form>
+        </div>
+        <div class="cont-cuerpo" id="comentario">
+            <div class="comentario-izq">
+                <img src="" alt="imagen de perfil">
+                <h3>Nombre de Usuario</h3>
+                <span>Se unió el: *fecha creacion de perfil*</span>
+            </div>
+            <div class="comentario-der">
+                <p>Descripción de publicación</p>
+                <span>Fecha de publicación</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
