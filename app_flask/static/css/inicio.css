@@ -157,6 +157,8 @@ nav{
 }
 .dp-comentarios {
     display: flex;
+    flex-shrink: 0;
+    width: 100px;
     align-items: end;
     justify-content: flex-end;
 }
