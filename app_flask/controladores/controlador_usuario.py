@@ -1,6 +1,7 @@
 from flask import render_template, session, redirect, request, flash
 from app_flask.modelos.modelo_usuario import Usuario
 from app_flask.modelos.modelo_post import Post
+from app_flask.modelos.modelo_evento import Evento
 from app_flask import app
 from flask_bcrypt import Bcrypt
 
@@ -12,7 +13,9 @@ def login():
 
 @app.route('/inicio')
 def inicio():
-    return render_template("inicio.html")
+    lista_posts = Post.obtener_post_dashboard()
+    lista_eventos = Evento.obtener_evento_dashboard()
+    return render_template("inicio.html", lista_posts = lista_posts, lista_eventos = lista_eventos)
 
 @app.route('/registrarse')
 def formulario_registro():

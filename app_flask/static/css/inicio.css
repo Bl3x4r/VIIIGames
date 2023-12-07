@@ -9,7 +9,10 @@ html{
     flex-direction: column;
 }
 body{
+    display: flex;
+    flex-direction: column;
     background-color: #9b836ad0;
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 a{
     font-size: 1.2rem;
@@ -81,7 +84,6 @@ nav{
 
 */
 .cuerpo{
-    height: 700px;
     display: flex;
     flex-direction: column;
     padding: 16px 32px;
@@ -99,8 +101,10 @@ nav{
     border: 1px solid black;
     border-radius: 5px;
 }
-
 .cont-eventos{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
     height: 300px;
     padding: 16px;
     background-color: #413e42;
@@ -110,7 +114,11 @@ nav{
     box-shadow: 1px 1px #B9B8B5;
 }
 .cont-posts{
-    height: 150px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: 20px;
+    height: 300px;
     padding: 16px;
     background-color: #413e42;
     color: #EAD94C;
@@ -119,10 +127,40 @@ nav{
     box-shadow: 1px 1px #B9B8B5;
 }
 .cont-cuerpo{
+    display: flex;
+    flex-direction: column;
     background-color: #848482;
     border-radius: 20px;
     box-shadow: 2px 2px #BEBEBE;
     padding: 8px;
+}
+.dash-post{
+    display: flex;
+    gap: 20px;
+}
+.dp-left {
+    display: flex;
+    flex-shrink: 0; 
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+}
+.dp-right {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.dp-td{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.dp-comentarios {
+    display: flex;
+    flex-shrink: 0;
+    width: 100px;
+    align-items: end;
+    justify-content: flex-end;
 }
 
 /* 
