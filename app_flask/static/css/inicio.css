@@ -155,12 +155,18 @@ nav{
     flex-direction: column;
     gap: 10px;
 }
-.dp-comentarios {
+.dp-comentarios{
     display: flex;
+    font-weight: 600;
+    gap: 5px;
     flex-shrink: 0;
     width: 100px;
     align-items: end;
     justify-content: flex-end;
+}
+.dp-comentarios img{
+    height: 25px;
+    width: 27px;
 }
 
 /* 

@@ -138,7 +138,7 @@
             <div class="cont-posts">
                 <div class="dash-post">
                     <div class="dp-left">
-                        <img src="imagen5.jpg" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                        <img src="" alt="Imagen usuario" class="publicacion-usuario-imagen">
                         <p>EstrategaMaster</p>
                         <p>2023-12-08 09:00:00</p>
                     </div>
@@ -148,7 +148,7 @@
                             <p>¿Eres fanático de los juegos de estrategia? Comparto algunos consejos que he aprendido a lo largo de los años. Desde juegos de mesa hasta estrategias en línea, ¡vamos a discutir cómo dominar el arte de la estrategia!</p>
                         </div>
                         <div class="dp-comentarios">
-                            <img src="/app_flask/static/img/icono_comentarios.png" alt="Ícono Comentarios">
+                            <img src="{{url_for('static', filename='img/icono_comentarios.png')}}" alt="Ícono Comentarios">
                             <span>7</span>
                         </div>
                     </div>
@@ -156,7 +156,7 @@
                 <hr>
                 <div class="dash-post">
                     <div class="dp-left">
-                        <img src="imagen3.jpg" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                        <img src="" alt="Imagen usuario" class="publicacion-usuario-imagen">
                         <p>DadosyTableros</p>
                         <p>2023-12-10 18:00:00</p>
                     </div>
@@ -166,7 +166,7 @@
                             <p>Acabo de jugar a "El Laberinto Mágico" y quiero compartir mi opinión. Este juego de estrategia y magia es una joya. ¿Alguien más lo ha probado? ¡Hablemos de nuestras experiencias!</p>
                         </div>
                         <div class="dp-comentarios">
-                            <img src="/app_flask/static/img/icono_comentarios.png" alt="Ícono Comentarios">
+                            <img src="{{url_for('static', filename='img/icono_comentarios.png')}}" alt="Ícono Comentarios">
                             <span>5</span>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                 <hr>
                 <div class="dash-post">
                     <div class="dp-left">
-                        <img src="imagen2.jpg" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                        <img src="" alt="Imagen usuario" class="publicacion-usuario-imagen">
                         <p>MesaMaestra</p>
                         <p>2023-12-11 15:30:00</p>
                     </div>
@@ -184,7 +184,7 @@
                             <p>Estoy organizando una nueva campaña de rol en un mundo de fantasía épica. Buscamos jugadores apasionados que quieran sumergirse en una historia llena de misterio y aventura. ¡Inscríbete y forma parte de esta emocionante travesía!</p>
                         </div>
                         <div class="dp-comentarios">
-                            <img src="/app_flask/static/img/icono_comentarios.png" alt="Ícono Comentarios">
+                            <img src="{{url_for('static', filename='img/icono_comentarios.png')}}" alt="Ícono Comentarios">
                             <span>8</span>
                         </div>
                     </div>
@@ -203,7 +203,7 @@
                             <p>{{ i.descripcion_post }}</p>
                         </div>
                         <div class="dp-comentarios">
-                            <img src="/app_flask/static/img/icono_comentarios.png" alt="Ícono Comentarios">
+                            <img src="{{url_for('static', filename='img/icono_comentarios.png')}}" alt="Ícono Comentarios">
                             {{ i.num_comentarios }}
                         </div>
                     </div>
