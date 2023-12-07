@@ -12,6 +12,7 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #9b836ad0;
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 a{
     font-size: 1.2rem;
