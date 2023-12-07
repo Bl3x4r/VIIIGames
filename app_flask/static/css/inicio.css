@@ -146,6 +146,10 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
+.dp-left img{
+    height: 50px;
+    height: 50px;
+}
 .dp-right {
     display: flex;
     flex-grow: 1;
