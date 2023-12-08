@@ -28,28 +28,42 @@
     </div>
 </nav>
 <body>
-    <div class="crear-post">
-        <a href="/crear/post">Crear Post</a>
-    </div>
-    {% for i in lista_posts %}
-        <div class="dash-post">
-            <div class="dp-left">
-                <img src="" alt="Imagen usuario" class="publicacion-usuario-imagen">
-                <p>{{ i.usuario.nombre_usuario }}</p>
-                <p>{{ i.fecha_creacion }}</p>
-            </div>
-            <div class="dp-right">
-                <div class="dp-td">
-                    <h2>{{ i.nombre_post }}</h2>
-                    <p>{{ i.descripcion_post }}</p>
-                </div>
-                <div class="dp-comentarios">
-                    <img src="" alt="Ícono Comentarios">
-                    {{ i.num_comentarios }}
-                </div>
+    <div class="cuerpo">
+        <div class="cuerpo-top">
+            <div class="crear-post">
+                <a href="/crear/post">Crear Post</a>
             </div>
         </div>
-    {% endfor %}
+        <div class="cuerpo-btm">
+            {% for i in lista_posts %}
+                <div class="dash-post">
+                    <div class="dp-left">
+                        <div class="dp-left-top">
+                            <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                            <p>{{ i.usuario.nombre_usuario }}</p>
+                        </div>
+                        <p>{{ i.fecha_creacion }}</p>
+                    </div>
+                    <hr>
+                    <div class="dp-right">
+                        <div class="dp-td">
+                            <div class="dp-td-tf"> 
+                                <h2>{{ i.nombre_post }}</h2>
+                                <span>Creado el  {{ i.fecha_creacion }}</span>
+                            </div>
+                            <div class="dp-dc">
+                                <p>{{ i.descripcion_post }}</p>
+                                <div class="dp-comentarios">
+                                    <img src="{{url_for('static', filename='img/icono_comentarios.png')}}" alt="Ícono Comentarios">
+                                    {{ i.num_comentarios }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 
 </body>
 </html>

@@ -9,21 +9,31 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
 </head>
-<nav nav-hdr>
+<nav>
     <div class="cont_izq">
-        <h1>Crear Nuevo Post</h1>
+        <img src="{{url_for('static', filename='img/logo.jpeg')}}" alt="Logo de VIIIGames" class="img logo">
+        <h1>Crear Post</h1>
     </div>
-    <div class="cont-der">
+    <div class="cont_der">
         <ul class="lista">
-            <li><a href="/inicio" class="item">Inicio</a></li>
+            <li><a href="/dashboard" class="item">Posts</a></li>
             <li><a href="#" class="item">Eventos</a></li>
             <li><a href="#" class="item">Tus Mensajes</a></li>
         </ul>
         <div class="cont-perfil-btn">
-            <a href="/perfil/{{ session['nombre_usuario']}}" class="item">Perfil</a>
-            <form action="/cerrar/sesion" method="get">
-                <button>Cerrar Sesión</button>
+            {% if 'nombre_usuario' not in session %}
+            <form action="/iniciar/sesion" method="get">
+                <button>Iniciar Sesión</button>
             </form>
+            <form action="/registrarse" method="get">
+                <button>Registrarse</button>
+            </form>
+            {%else%}
+                <a href="/perfil/{{session['nombre_usuario']}}" class="item">Perfil</a>
+                <form action="/cerrar/sesion" method="get">
+                    <button>Cerrar Sesión</button>
+                </form>
+            {%endif%}
         </div>
     </div>
 </nav>

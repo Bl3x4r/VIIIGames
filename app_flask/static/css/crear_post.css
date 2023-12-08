@@ -1,69 +1,84 @@
-body {
-    background-color: #9b836ad0;
-    color: #333;
-    margin: 0;
-    font-family: 'Be Vietnam Pro', sans-serif;
-}
-
-nav[nav-hdr] {
-    background-color: #C47335;
-    color: #fff;
-    height: 100px;
-    padding: 10px;
-    margin: 0px 16px;
-    border-radius: 0px 0px 5px 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.cont_izq h1 {
-    margin: 0;
-}
-
-.lista {
-    list-style: none;
+*{
     padding: 0;
     margin: 0;
+    list-style: none;
+    /* border: 1px solid black; */
+}
+html{
     display: flex;
+    flex-direction: column;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #9b836ad0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+a{
+    font-size: 1.2rem;
+}
+button {
+    background-color: #fff;
+    color: #C47335;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.lista li {
-    margin-right: 20px;
+/* 
+
+    Header de la Pagina
+
+*/
+.logo{
+    height: 75px;
+    border-radius: 20px;
 }
 
-.lista a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-.cont-der{
+nav{
     display: flex;
     align-items: center;
+    height: 100px;
+    gap: 50px;
+    justify-self: center;
+    padding: 10px;
+    margin: 0 16px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #EAD94C;
+    border-left: 1px solid #EAD94C;
+    box-shadow: 2px 2px #EAD94C;
+    background-color: #C47335;
 }
-
-.cont-perfil-btn {
+.cont_izq{
+    flex: 2;
+    padding: 5px;
     display: flex;
+    gap: 50px;
     align-items: center;
-    gap: 20px;
 }
-
-.cont-cuerpo{
+.cont_der{
+    flex: 3;
     display: flex;
-    width: 100%;
+    justify-content: space-around;
+    padding: 5px;
 }
-
-button:hover {
-    background-color: #ddd;
+.lista{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 15px;
 }
-
+.item{
+    text-decoration: none;
+    color: black;
+}
+.cont-perfil-btn{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+/*
 #crear-post {
     max-width: 800px;
     margin: 20px auto; 
@@ -109,3 +124,4 @@ button {
 button:hover {
     background-color: #9b5b2b;
 }
+/*
