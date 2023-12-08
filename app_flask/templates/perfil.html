@@ -27,32 +27,40 @@
     </div>
 </nav>
 <body>
-    <div>
-        <h1> {{ usuario_perfil.nombre_usuario }} </h1>
-        <div class="nombre">
-            <h2> {{ usuario_perfil.nombre }} </h2> 
-            <h2> {{ usuario_perfil.apellido }} </h2>
-        </div>
-    </div>
-    <div>
-    </div>
-        <h1>Tus Publicaciones</h1>
-        {% if posts_perfil|length == 0 %}
-            <h1>No tienes publicaciones...</h1>
-        {% else %}
-            {% for i in posts_perfil %}
-                <div class="dash-post">
-                    <div class="dp-top">
-                        <p>Usuario: {{ i.usuario.nombre_usuario }}</p>
-                        <p>{{ i.fecha_creacion }}</p>
+    <div class="cuerpo">
+            <div class="cuerpo-top">
+                <h1> {{ usuario_perfil.nombre_usuario }} </h1>
+            </div>
+            <div class="cuerpo-btm">
+                <h1>Tus Publicaciones</h1>
+                {% for i in posts_perfil %}
+                    <div class="dash-post">
+                        <div class="dp-left">
+                            <div class="dp-left-top">
+                                <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                                <p>{{ i.usuario.nombre_usuario }}</p>
+                            </div>
+                            <p>{{ i.usuario.fecha_creacion }}</p>
+                        </div>
+                        <hr>
+                        <div class="dp-right">
+                            <div class="dp-td">
+                                <div class="dp-td-tf"> 
+                                    <h2>{{ i.nombre_post }}</h2>
+                                    <span>Creado el  {{ i.fecha_creacion }}</span>
+                                </div>
+                                <div class="dp-dc">
+                                    <p>{{ i.descripcion_post }}</p>
+                                    <div class="dp-comentarios">
+                                        <img src="{{url_for('static', filename='img/icono_comentarios.png')}}" alt="Ícono Comentarios">
+                                        {{ i.num_comentarios }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="dp-btm">
-                        <h2>{{ i.nombre_post }}</h2>
-                        {{ i.descripcion_post }}
-                    </div>
-                </div>
-            {% endfor %}
-        {% endif %}
+                {% endfor %}
+            </div>
     </div>
 </body>
 </html>
