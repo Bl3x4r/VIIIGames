@@ -11,7 +11,7 @@ html{
 body{
     display: flex;
     flex-direction: column;
-    background-color: #9b836ad0;
+    background-color: antiquewhite;
     font-family: 'Be Vietnam Pro', sans-serif;
 }
 a{
@@ -39,16 +39,11 @@ button {
 nav{
     display: flex;
     align-items: center;
-    height: 100px;
     gap: 50px;
     justify-self: center;
     padding: 10px;
-    margin: 0 16px;
-    font-size: 1.3rem;
-    border-bottom: 2px solid #EAD94C;
-    border-left: 1px solid #EAD94C;
-    box-shadow: 2px 2px #EAD94C;
-    background-color: #C47335;
+    border-bottom: 3px solid #EAD94C;
+    background-color: #f88f3e;
 }
 .cont_izq{
     flex: 2;
@@ -71,7 +66,7 @@ nav{
 }
 .item{
     text-decoration: none;
-    color: black;
+    color: #fff;
 }
 .cont-perfil-btn{
     display: flex;
@@ -95,7 +90,7 @@ nav{
     margin-left: 100px;
     margin: 15px;
     font-size: 1.5rem;
-    color: #EAD94C;
+    color: #fff;
 }
 .cont-eventos,.cont-posts{
     border: 1px solid black;
@@ -120,13 +115,10 @@ nav{
     }
 }
 .cont-eventos{
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
     height: 300px;
     padding: 16px;
     background-color: #413e42;
-    color: #EAD94C;
+    color: #fff;
     border: 3px ridge;
     border-color: #B9B8B5;
     box-shadow: 1px 1px #B9B8B5;
@@ -135,19 +127,18 @@ nav{
     display: flex;
     flex-direction: column;
     overflow: auto;
-    gap: 20px;
     height: 300px;
     padding: 16px;
-    background-color: #413e42;
-    color: #EAD94C;
-    border: 3px ridge;
-    border-color: #B9B8B5;
-    box-shadow: 1px 1px #B9B8B5;
+    background-color: antiquewhite;
+    color: #3f3b3b;
+    border: 3px solid;
+    border-color: #EAD94C;
 }
 .cont-cuerpo{
     display: flex;
     flex-direction: column;
-    background-color: #848482;
+    background-color: #f88f3e;
+    border:#ebbe6b solid;
     border-radius: 20px;
     box-shadow: 2px 2px #BEBEBE;
     padding: 8px;

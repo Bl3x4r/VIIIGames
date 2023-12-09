@@ -39,16 +39,11 @@ button {
 nav{
     display: flex;
     align-items: center;
-    height: 100px;
     gap: 50px;
-    justify-self: center;
+    justify-content: space-between;
     padding: 10px;
-    margin: 0 16px;
-    font-size: 1.3rem;
-    border-bottom: 2px solid #EAD94C;
-    border-left: 1px solid #EAD94C;
-    box-shadow: 2px 2px #EAD94C;
-    background-color: #C47335;
+    border-bottom: 3px solid #EAD94C;
+    background-color: #f88f3e;
 }
 .cont_izq{
     flex: 2;

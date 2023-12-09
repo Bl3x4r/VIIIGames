@@ -1,6 +1,7 @@
 body {
-    background-color: #9b836ad0;
+    background-color: antiquewhite;
     font-family: 'Be Vietnam Pro', sans-serif;
+    padding: 30px;
 }
 
 .container {
@@ -8,7 +9,7 @@ body {
     margin: 0 auto;
     padding: 40px;
     text-align: center;
-    background-color: #6b4000d2;
+    background-color: #f88f3e;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -44,7 +45,7 @@ form input[type="password"]::placeholder {
 form input[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #555445;
+    background-color: #867b6f;
     border: none;
     border-radius: 3px;
     color: #fff;

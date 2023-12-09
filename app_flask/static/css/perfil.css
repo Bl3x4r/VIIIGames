@@ -11,7 +11,7 @@ html{
 body{
     display: flex;
     flex-direction: column;
-    background-color: #9b836ad0;
+    background-color: antiquewhite;
     font-family: 'Be Vietnam Pro', sans-serif;
 }
 a{
@@ -39,16 +39,11 @@ button {
 nav{
     display: flex;
     align-items: center;
-    height: 100px;
     gap: 50px;
-    justify-self: center;
+    justify-content: space-between;
     padding: 10px;
-    margin: 0 16px;
-    font-size: 1.3rem;
-    border-bottom: 2px solid #EAD94C;
-    border-left: 1px solid #EAD94C;
-    box-shadow: 2px 2px #EAD94C;
-    background-color: #C47335;
+    border-bottom: 3px solid #EAD94C;
+    background-color: #f88f3e;
 }
 .cont_izq{
     flex: 2;
@@ -97,13 +92,12 @@ nav{
 }
 .dash-post{
     display: flex;
-    background-color: #413e42;
-    gap: 5px;
-    color:#EAD94C;
-    height: 200px;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 10px;
+    flex-direction: column;
+    background-color: #f88f3e;
+    border:#ebbe6b solid;
+    border-radius: 20px;
+    box-shadow: 2px 2px #BEBEBE;
+    padding: 8px;
 }
 .dp-left{
     display: flex;
@@ -112,6 +106,12 @@ nav{
     align-items: center;
     flex-shrink: 0; 
     width: 200px;
+}
+.dp-btm{
+    background-color: antiquewhite ;
+    border: solid #f88f3e;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .dp-left-top{
     display: flex;
