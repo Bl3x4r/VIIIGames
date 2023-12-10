@@ -24,6 +24,13 @@ h2 {
     color: #fff;
     margin-bottom: 20px;
 }
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 8px; */
+}
 
 form input[type="text"],
 form input[type="password"] {
@@ -69,4 +76,15 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.error{
+    background-color: lightcoral;
+    border: 2px inset black;
+    border-radius: 5px;
+    font-size: 15px;
+    max-width: 250px;
+    max-height: 40px;
+    font-weight: bold;
+    margin-bottom: 8px;
 }

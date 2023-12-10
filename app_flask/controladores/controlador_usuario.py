@@ -43,10 +43,10 @@ def process_register():
 def procesa_login():
     usuario_login = Usuario.obtener_uno(request.form)
     if usuario_login == None:
-        flash('Este usuario no exite', 'error_login')
+        flash('Este usuario no exite', 'error_nombre_usuario')
         return redirect("/iniciar/sesion")
     if not bcrypt.check_password_hash(usuario_login.contraseña, request.form['contraseña']):
-        flash('Credenciales Incorrectas', 'error_login')
+        flash('La contraseña y/o el usuario son incorrectos', 'error_contraseña')
         return redirect("/iniciar/sesion")
     session['id_usuario'] = usuario_login.id
     session['nombre_usuario'] = usuario_login.nombre_usuario
