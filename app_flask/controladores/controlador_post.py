@@ -29,3 +29,13 @@ def renderizar_dashboard_posts():
         return redirect('/')
     lista_posts = Post.obtener_post_dashboard()
     return render_template('tablero.html', lista_posts = lista_posts)
+
+@app.route('/mensajes')
+def ver_mensajes():
+    if 'id_usuario' not in session:
+        return redirect('/')
+    return render_template('mensajes.html')
+
+@app.route('/chat')
+def desplegar_chat():
+    return render_template('chat.html')

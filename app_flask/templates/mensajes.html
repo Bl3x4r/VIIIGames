@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Nuestra Misión</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/mision_CSS.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tus mensajes</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/mensajes.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
-<header>
+<body>
     <nav>
         <div class="cont_izq">
             <img src="{{url_for('static', filename='img/logo.jpeg')}}" alt="Logo de VIIIGames" class="img logo">
@@ -34,11 +38,15 @@
             </div>
         </div>
     </nav>
-</header>
-<body>
-    <div class="container">
-        <h2>Nuestra Misión:</h2>
-        <p>Nuestra misión es crear una experiencia integral al facilitar la planificación de eventos y partidas. Nos esforzamos por ofrecer un entorno donde la participación va más allá de la simple asistencia. Queremos ser un catalizador de la colaboración creativa y la construcción colectiva de experiencias inolvidables. Al elegirnos, disfrutarás de una experiencia única y sin complicaciones, ya que somos jugadores antes que developers y nos comprometemos íntimamente con el proyecto.</p>
+    <div class="flex-body">
+        <div class="body">
+        <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+        <h2 class="title2">vicente_2002 te ha enviado un mensaje!</h2>
+        <a href="/chat" class="notification">
+            <span>Ver mensaje</span>
+            <span class="badge">1</span>
+        </a>
+        </div>
     </div>
 </body>
 </html>
