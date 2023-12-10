@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/chat.css')}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<nav>
+    <div class="cont_der">
+        <ul class="lista">
+            <li><a href="/inicio" class="item">Inicio</a></li>
+            <li><a href="#" class="item">Eventos</a></li>
+            <li><a href="#" class="item">Tus Mensajes</a></li>
+        </ul>
+        <div class="cont-perfil-btn">
+            <form action="/cerrar/sesion" method="get">
+                <button>Cerrar Sesión</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<body>
+  <div id="chat-container">
+    <div id="chat-messages">
+      <div><strong>vicente_2002:</strong> Hola, ¿cómo estás?</div>
+    </div>
+    <div id="input-container">
+      <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
+      <button id="send-button" onclick="sendMessage()">Enviar</button>
+    </div>
+  </div>
+
+  <script>
+    function sendMessage() {
+      var userInput = document.getElementById('user-input');
+      var message = userInput.value.trim();
+
+      if (message !== '') {
+        var chatMessages = document.getElementById('chat-messages');
+        var newMessage = document.createElement('div');
+        newMessage.innerHTML = '<strong>{{session['nombre_usuario']}}:</strong> ' + message;
+        chatMessages.appendChild(newMessage);
+
+        userInput.value = '';
+        userInput.focus();
+      }
+    }
+  </script>
+</body>
+</html>
