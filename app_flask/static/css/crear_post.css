@@ -66,14 +66,14 @@ nav{
 }
 .item{
     text-decoration: none;
-    color: black;
+    color: #fff;
 }
 .cont-perfil-btn{
     display: flex;
     gap: 50px;
     align-items: center;
 }
-/*
+
 #crear-post {
     max-width: 800px;
     margin: 20px auto; 
@@ -119,4 +119,3 @@ button {
 button:hover {
     background-color: #9b5b2b;
 }
-/*

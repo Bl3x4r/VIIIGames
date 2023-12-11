@@ -78,7 +78,7 @@ body{
 }
 .item{
     text-decoration: none;
-    color: #fff;
+    color: black;
 }
 .cont-perfil-btn{
     display: flex;

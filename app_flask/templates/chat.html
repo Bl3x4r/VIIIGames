@@ -42,7 +42,7 @@
       if (message !== '') {
         var chatMessages = document.getElementById('chat-messages');
         var newMessage = document.createElement('div');
-        newMessage.innerHTML = '<strong>{{session['nombre_usuario']}}:</strong> ' + message;
+        newMessage.innerHTML = '<strong>{{session["nombre_usuario"]}}:</strong> ' + message;
         chatMessages.appendChild(newMessage);
 
         userInput.value = '';

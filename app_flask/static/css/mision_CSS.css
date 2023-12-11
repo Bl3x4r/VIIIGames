@@ -69,7 +69,7 @@ nav{
     gap: 15px;
 }
 
-.item {
+.item, a {
     text-decoration: none;
     color: black;
 }
