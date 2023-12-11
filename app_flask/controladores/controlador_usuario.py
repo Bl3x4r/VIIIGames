@@ -4,11 +4,8 @@ from app_flask.modelos.modelo_post import Post
 from app_flask.modelos.modelo_evento import Evento
 from app_flask import app
 from flask_bcrypt import Bcrypt
-from werkzeug.utils import secure_filename
-import os
 
 bcrypt = Bcrypt(app)
-app.config['UPLOAD_FOLDER'] = '/app_flask/static/archivos_usuarios'
 
 @app.route('/', methods= ['GET'])
 def login():
@@ -61,18 +58,6 @@ def desplegar_perfil(pf_nombre_usuario):
     usuario_perfil = Usuario.obtener_uno(usr_dict)
     posts_perfil = Post.obtener_posts_perfil(usr_dict)
     return render_template("perfil.html", usuario_perfil = usuario_perfil, posts_perfil = posts_perfil)
-
-@app.route("/editar/imagen")
-def formulario():
-    return render_template("subir_imagen.html")
-
-@app.route("/subir/imagen", methods=["POST"])
-def subir_imagen():
-    if request.method == 'POST':
-        f = request.files['foto_perfil']
-        filename = secure_filename(f.filename)
-        f.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
-    return render_template("perfil.html")
 
 @app.route("/cerrar/sesion" , methods=["GET"])
 def procesa_logout():
