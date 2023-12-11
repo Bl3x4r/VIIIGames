@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>VIIIGames Publicacion</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/post.css')}}">
 </head>
 <body>
     <nav>
         <div class="cont_izq">
-            <h1>Perfil</h1>
+            <h1>VIIIGames</h1>
         </div>
         <div class="cont_der">
             <ul class="lista">
@@ -37,14 +38,23 @@
     <div class="cuerpo">
         <div class="cont-cuerpo" id="publicacion">
             <div class="publicacion-izq">
-                <img src="" alt="imagen de perfil">
-                <h3>Nombre de Usuario</h3>
-                <span>Se unió el: *fecha creacion de perfil*</span>
+                <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                <h3>EstrategaMaster</h3>
+                <span>Se unió el: 2023-11-02 13:23:15</span>
             </div>
+            <hr>
             <div class="publicacion-der">
-                <h2>Título de Publicacion</h2>
-                <p>Descripción de publicación</p>
-                <span>Fecha de publicación</span>
+                <h2>Consejos para Ganar en Juegos de Estrategia</h2>
+                <p>
+                    ¡Amantes de la estrategia, les comparto algunos consejos clave que he acumulado en años de 
+                    juegos. En juegos de mesa, sé versátil; ajusta tu estrategia según el desafío. En los 
+                    juegos en línea, la comunicación efectiva con tu equipo marca la diferencia. Gestiona 
+                    recursos en partidas largas y sumérgete en el rol en juegos de mesa. Para estrategias 
+                    en tiempo real, anticipa movimientos y, en juegos por turnos, planifica considerando 
+                    las respuestas de tus oponentes. Mantén la mente fresca en partidas largas. ¡Compartan 
+                    sus propios consejos y que la estrategia los guíe hacia la victoria en sus próximas 
+                    partidas! </p>
+                <span>2023-12-06 21:06:18</span>
             </div>
         </div>
         <div class="cont-cuerpo">
@@ -53,17 +63,91 @@
                 <button>Enviar comentario</button>
             </form>
         </div>
-        <div class="cont-cuerpo" id="comentario">
+        <div class="cont-cuerpo comentario">
             <div class="comentario-izq">
-                <img src="" alt="imagen de perfil">
-                <h3>Nombre de Usuario</h3>
-                <span>Se unió el: *fecha creacion de perfil*</span>
+                <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                <h3>StrategicMind42</h3>
+                <span>2023-12-06 21:06:18</span>
             </div>
+            <hr>
             <div class="comentario-der">
-                <p>Descripción de publicación</p>
-                <span>Fecha de publicación</span>
+                <p>Un consejo clave es estudiar a tus oponentes. Conoce sus patrones de juego y adapta tu estrategia en consecuencia. ¡La información es poder!</p>
+                <span>2023-12-07 09:15:32</span>
             </div>
         </div>
+        <div class="cont-cuerpo comentario">
+            <div class="comentario-izq">
+                <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                <h3>RiskMaster88</h3>
+                <span>2023-12-06 21:06:18</span>
+            </div>
+            <hr>
+            <div class="comentario-der">
+                <p>Cuando juegues juegos de estrategia en línea, coordina con tu equipo. La comunicación efectiva puede marcar la diferencia entre la victoria y la derrota.</p>
+                <span>2023-12-07 10:45:21</span>
+            </div>
+        </div>
+        <div class="cont-cuerpo comentario">
+            <div class="comentario-izq">
+                <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                <h3>ChessGrandmaster</h3>
+                <span>2023-12-06 21:06:18</span>
+            </div>
+            <hr>
+            <div class="comentario-der">
+                <p>Para juegos de mesa, practica el control del tablero. Mantén una visión amplia y no te enfoques solo en tus piezas. ¡La paciencia también es clave!</p>
+                <span>2023-12-07 12:30:45</span>
+            </div>
+        </div>
+        <div class="cont-cuerpo comentario">
+            <div class="comentario-izq">
+                <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                <h3>BoardGameStrategist</h3>
+                <span>2023-12-06 21:06:18</span>
+            </div>
+            <hr>
+            <div class="comentario-der">
+                <p>En juegos de mesa de larga duración, gestiona tus recursos con cuidado. Planifica tu estrategia a largo plazo y adapta tu enfoque según evolucione el juego.</p>
+                <span>2023-12-07 14:12:59</span>
+            </div>
+        </div>
+        <div class="cont-cuerpo comentario">
+            <div class="comentario-izq">
+                <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                <h3>StrategicGamerX</h3>
+                <span>2023-12-06 21:06:18</span>
+            </div>
+            <hr>
+            <div class="comentario-der">
+                <p>Para mantenerse enfocado en partidas largas, toma descansos cortos entre turnos. La mente fresca es crucial para tomar decisiones acertadas.</p>
+                <span>2023-12-07 15:55:23</span>
+            </div>
+        </div>
+        <div class="cont-cuerpo comentario">
+            <div class="comentario-izq">
+                <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                <h3>RPGStrategist</h3>
+                <span>2023-12-06 21:06:18</span>
+            </div>
+            <hr>
+            <div class="comentario-der">
+                <p>En juegos de rol, sumérgete en el personaje. Tomar decisiones coherentes con la historia puede abrir nuevas oportunidades estratégicas.</p>
+                <span>2023-12-07 17:30:14</span>
+            </div>
+        </div>
+        <div class="cont-cuerpo comentario">
+            <div class="comentario-izq">
+                <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                <h3>TurnBasedTactician</h3>
+                <span>2023-12-06 21:06:18</span>
+            </div>
+            <hr>
+            <div class="comentario-der">
+                <p>En juegos de estrategia por turnos, anticipa los movimientos del oponente. Planifica tus acciones considerando las posibles respuestas del contrario.</p>
+                <span>2023-12-07 19:20:08</span>
+            </div>
+        </div>
+        
     </div>
 </body>
 </html>
