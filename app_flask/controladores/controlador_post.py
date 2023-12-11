@@ -18,9 +18,8 @@ def crear_post():
     Post.crear_post(nuevo_post)
     return redirect('/inicio')
 
-@app.route('/post', methods=['GET'])
+@app.route('/post/1', methods=['GET'])
 def renderizar_post():
-    
     return render_template('post.html')
 
 @app.route('/dashboard', methods=['GET'])

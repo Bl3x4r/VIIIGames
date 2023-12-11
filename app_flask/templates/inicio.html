@@ -6,6 +6,7 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/inicio.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
@@ -15,7 +16,7 @@
      -->
     <nav>
         <div class="cont_izq">
-            <img src="{{url_for('static', filename='img/logo.jpeg')}}" alt="Logo de VIIIGames" class="img logo">
+            <img src="{{url_for('static', filename='img/logo.png')}}" alt="Logo de VIIIGames" class="img logo">
             <h1>Inicio</h1>
         </div>
         <div class="cont_der">
@@ -144,7 +145,7 @@
                     </div>
                     <div class="dp-right">
                         <div class="dp-td">
-                            <h2>Consejos para Ganar en Juegos de Estrategia</h2>
+                            <a href="/post/1"><h2>Consejos para Ganar en Juegos de Estrategia</h2></a>
                             <p>¿Eres fanático de los juegos de estrategia? Comparto algunos consejos que he aprendido a lo largo de los años. Desde juegos de mesa hasta estrategias en línea, ¡vamos a discutir cómo dominar el arte de la estrategia!</p>
                         </div>
                         <div class="dp-comentarios">
