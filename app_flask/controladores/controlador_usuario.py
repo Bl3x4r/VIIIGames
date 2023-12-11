@@ -35,7 +35,7 @@ def process_register():
         'contraseña' : encrypted_password
     }
     id_usuario = Usuario.crear_uno(nuevo_usuario)
-    
+    session['nombre_usuario'] = nuevo_usuario.nombre_usuario
     session['id_usuario'] = id_usuario
     return redirect("/inicio")
 
