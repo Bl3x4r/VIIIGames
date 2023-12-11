@@ -11,7 +11,7 @@ body {
     max-width: 600px;
     padding: 40px;
     text-align: justify;
-    background-color: #6b4000d2;
+    background-color: #f88f3e;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     color: #fff;
@@ -45,7 +45,7 @@ nav{
     border-bottom: 2px solid #EAD94C;
     border-left: 1px solid #EAD94C;
     box-shadow: 2px 2px #EAD94C;
-    background-color: #C47335;
+    background-color: #f88f3e;
     z-index: 1000;
 }
 
@@ -72,6 +72,10 @@ nav{
 .item {
     text-decoration: none;
     color: black;
+}
+
+ul{
+    list-style-type: none;
 }
 
 .cont-perfil-btn {
