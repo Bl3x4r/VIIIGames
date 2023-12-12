@@ -84,6 +84,16 @@ nav{
 }
 .cuerpo-top{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cuerpo-top img{
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid whitesmoke;
+}
+.nombre-descripcion{
+    background-color: #f88f3e;
 }
 .cuerpo-btm{
     display: flex;
@@ -92,7 +102,6 @@ nav{
 }
 .dash-post{
     display: flex;
-    flex-direction: column;
     background-color: #f88f3e;
     border:#ebbe6b solid;
     border-radius: 20px;

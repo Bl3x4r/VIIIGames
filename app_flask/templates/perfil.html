@@ -11,6 +11,7 @@
 </head>
 <nav>
     <div class="cont_izq">
+        <img src="{{url_for('static', filename='img/logo.png')}}" alt="Logo de VIIIGames" class="img logo">
         <h1>Perfil</h1>
     </div>
     <div class="cont_der">
@@ -28,8 +29,13 @@
 </nav>
 <body>
     <div class="cuerpo">
-            <div class="cuerpo-top">
-                <h1> {{ usuario_perfil.nombre_usuario }} </h1>
+            <div class="cuerpo-top"> <!-- aquí va el nombre de usuario, foto, portada y fecha de unión-->
+                <div>
+                    <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                </div>
+                <div class="nombre-descripcion">
+                    <h1> {{ usuario_perfil.nombre_usuario }} </h1>
+                </div>
             </div>
             <div class="cuerpo-btm">
                 <h1>Tus Publicaciones</h1>
