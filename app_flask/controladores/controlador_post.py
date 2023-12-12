@@ -18,7 +18,7 @@ def crear_post():
     Post.crear_post(nuevo_post)
     return redirect('/inicio')
 
-@app.route('/post/1', methods=['GET'])
+@app.route('/post/EstrategaMaster/1', methods=['GET'])
 def renderizar_post():
     return render_template('post.html')
 
@@ -44,3 +44,7 @@ def desplegar_chat():
 @app.route('/eventos')
 def renderizar_dashboard_eventos():
     return render_template('eventos.html')
+
+@app.route('/evento/DadoEstelarTienda/1')
+def render_evento_1():
+    return render_template('evento1.html')

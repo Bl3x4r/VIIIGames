@@ -74,7 +74,7 @@ nav{
     align-items: center;
 }
 
-/* Cuerpo */
+/* cuerpo */
 
 .cuerpo{
     display: flex;
@@ -103,29 +103,15 @@ nav{
 .publicacion-izq img{
     height: 100px;
 }
+.publicacion-izq-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .publicacion-der{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
-}
-form{
-    width: 100%;
-}
-.cont-cuerpo textarea{
-    width: 100%;
-    box-sizing: border-box;
-    resize: none;
-}
-.comentario-izq{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    flex-shrink: 0;
-    width: 250px;
-    height: 100px;
-}
-.comentario-izq img{
-    height: 50px;
 }

@@ -4,8 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos VIIIGames</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/eventos.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
 </head>
+<nav>
+    <div class="cont_izq">
+        <img src="{{url_for('static', filename='img/logo.png')}}" alt="Logo de VIIIGames" class="img logo">
+        <h1>Eventos</h1>
+    </div>
+    <div class="cont_der">
+        <ul class="lista">
+            <li><a href="/inicio" class="item">Inicio</a></li>
+            <li><a href="/dashboard" class="item">Publicaciones</a></li>
+            <li><a href="/mensajes" class="item">Tus Mensajes</a></li>
+        </ul>
+        <div class="cont-perfil-btn">
+            <a href="/perfil/{{ session['nombre_usuario']}}" class="item">Perfil</a>
+            <form action="/cerrar/sesion" method="get">
+                <button>Cerrar Sesión</button>
+            </form>
+        </div>
+    </div>
+</nav>
 <body>
-    
+    <div class="cuerpo">
+        <div class="cuerpo-top">
+            <div class="crear-post">
+                <!-- filtro de posts-->
+                filtro por comunidad
+            </div>
+        </div>
+        <div class="cuerpo-btm">
+            <div class="dash-post">
+                <div class="dp-left">
+                    <div class="dp-left-top">
+                        <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                        <p>DadoEstelarTienda</p>
+                    </div>
+                    <p>2023-12-06 21:06:18</p>
+                </div>
+                <hr>
+                <div class="dp-right">
+                    <div class="dp-td">
+                        <div class="dp-td-tf">
+                            <a href="/evento/DadoEstelarTienda/1"><h2>"Juegos Bajo las Estrellas"</h2></a>
+                            <span>Creado el 2023-12-06 21:06:18</span>
+                        </div>
+                        <div class="dp-dc">
+                            <p>Únete a la comunidad de "El Dado Feliz" para 
+                                una noche especial de juegos de mesa bajo el cielo estrellado. Habrá demostraciones 
+                                de nuevos juegos, descuentos exclusivos y premios para los campeones de los torneos 
+                                relámpago. ¡No te pierdas esta experiencia única de juego!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

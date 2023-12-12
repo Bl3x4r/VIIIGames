@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento DadoEstelarTienda</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/evento1.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
+</head>
+<nav>
+    <div class="cont_izq">
+        <img src="{{url_for('static', filename='img/logo.png')}}" alt="Logo de VIIIGames" class="img logo">
+        <h1>Eventos</h1>
+    </div>
+    <div class="cont_der">
+        <ul class="lista">
+            <li><a href="/inicio" class="item">Inicio</a></li>
+            <li><a href="/dashboard" class="item">Publicaciones</a></li>
+            <li><a href="/mensajes" class="item">Tus Mensajes</a></li>
+        </ul>
+        <div class="cont-perfil-btn">
+            <a href="/perfil/{{ session['nombre_usuario']}}" class="item">Perfil</a>
+            <form action="/cerrar/sesion" method="get">
+                <button>Cerrar Sesión</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<body>
+    <div class="cuerpo">
+        <div class="cont-cuerpo" id="publicacion">
+            <div class="publicacion-izq">
+                <div class="publicacion-izq-top">
+                    <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                    <h3>DadoEstelarTienda</h3>
+                    <span>Se unió el: 2023-11-02 13:23:15</span>
+                </div>
+            </div>
+            <hr>
+            <div class="publicacion-der">
+                <h2>"Juegos Bajo las Estrellas"</h2>
+                <p>
+                    ¡Únete a la comunidad de "El Dado Feliz" para una noche especial de juegos de mesa 
+                    bajo el cielo estrellado. Estamos emocionados de invitarte al evento más esperado 
+                    del año, patrocinado por la reconocida tienda Dado Estelar. Esta experiencia única 
+                    de juego, que hemos titulado "Noche Estelar de Juegos y Diversión", promete llevarte 
+                    a una jornada inolvidable de entretenimiento.
+                </p>
+                <br>
+                <h3>Detalles del Evento:</h3>
+                <ul>
+                    <li><strong>Fecha:</strong> Sábado, 20 de mayo</li>
+                    <li><strong>Hora:</strong> 18:00 - 23:00</li>
+                    <li><strong>Lugar:</strong> Dado Estelar, Av. Ludocielo #123</li>
+                </ul>
+                <br>
+                <h3>Actividades Programadas:</h3>
+                <p><strong>Demostraciones de Nuevos Juegos:</strong><br>
+                    Descubre las últimas novedades en el mundo de los juegos de mesa. Expertos estarán 
+                    disponibles para guiarte a través de emocionantes demostraciones de los títulos más 
+                    innovadores. ¿Tienes curiosidad por probar algo nuevo? ¡Esta es tu oportunidad!</p>
+                
+                <p><strong>Descuentos Exclusivos:</strong><br>
+                    Dado Estelar quiere agradecer a la comunidad "El Dado Feliz" por su continua lealtad. 
+                    Durante la noche, disfruta de descuentos exclusivos en una amplia gama de juegos de 
+                    mesa, accesorios y más. Es el momento perfecto para ampliar tu colección o encontrar 
+                    el regalo ideal para un amigo jugador.</p>
+    
+                <p><strong>Torneos Relámpago:</strong><br>
+                    Desafía a tus amigos y demuestra tus habilidades en nuestros torneos relámpago. Desde 
+                    estrategia hasta rapidez mental, habrá competiciones para todos los gustos. Los campeones 
+                    recibirán premios especiales y reconocimientos. ¡Prepárate para la batalla y sé coronado 
+                    como el rey o la reina de la noche!</p>
+    
+                <p><strong>Ambiente Único bajo el Cielo Estrellado:</strong><br>
+                    Imagina jugar tus juegos de mesa favoritos mientras el cielo se llena de estrellas. Hemos 
+                    creado un espacio mágico y acogedor para que disfrutes de tus partidas al aire libre. 
+                    Sillas cómodas, mantas y luces tenues completarán la atmósfera perfecta para una noche 
+                    inolvidable.</p>
+    
+                <h3>Cómo Participar:</h3>
+                <p>
+                    La entrada es gratuita para los miembros de "El Dado Feliz". Si aún no eres miembro, 
+                    ¡no te preocupes! Puedes registrarte en la tienda o en línea antes del evento y unirte 
+                    a nosotros en esta celebración única. ¡Asegúrate de venir temprano para aprovechar al 
+                    máximo la noche estelar de juegos y diversión!
+                </p>
+                <p>
+                    No te pierdas esta oportunidad de sumergirte en el mundo de los juegos de mesa de una 
+                    manera completamente nueva. "El Dado Feliz" te espera para compartir risas, estrategias 
+                    y, sobre todo, ¡una noche llena de estrellas y diversión! ¡Nos vemos bajo el cielo 
+                    estrellado! 
+                </p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
