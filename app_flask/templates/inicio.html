@@ -23,7 +23,9 @@
             <ul class="lista">
                 <li><a href="/dashboard" class="item">Publicaciones</a></li>
                 <li><a href="/eventos" class="item">Eventos</a></li>
-                <li><a href="/mensajes" class="item">Tus Mensajes</a></li>
+                {% if 'nombre_usuario' in session %}
+                    <li><a href="/mensajes" class="item">Tus Mensajes</a></li>
+                {%endif%}
             </ul>
             <div class="cont-perfil-btn">
                 {% if 'nombre_usuario' not in session %}

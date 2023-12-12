@@ -35,14 +35,12 @@
                 </div>
                 <div class="nombre-descripcion">
                     <h1> {{ usuario_perfil.nombre_usuario }} </h1>
-                    <p>Usuario desde: 2022-04-06</p>
+                    <p>Usuario desde: {{ usuario_perfil.fecha_creacion }}</p>
                 </div>
             </div>
             <div class="cuerpo-btm">
                 <div class="btm-izq">
-                    <div class="usuario-descripcion">
-                        <h1>Descripcion</h1>
-                    </div>
+                    
                     <div class="publicaciones">
                         <h1>Tus Publicaciones</h1>
                         {% for i in posts_perfil %}
