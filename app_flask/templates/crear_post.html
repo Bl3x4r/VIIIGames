@@ -12,7 +12,7 @@
 <nav>
     <div class="cont_izq">
         <img src="{{url_for('static', filename='img/logo.png')}}" alt="Logo de VIIIGames" class="img logo">
-        <h1>Crear Post</h1>
+        <h1>Crear Publicación</h1>
     </div>
     <div class="cont_der">
         <ul class="lista">
@@ -41,14 +41,14 @@
     <div class="cont-cuerpo">
         <form action="/procesar/creacion_post" method="POST" id="crear-post">
             <div>
-                <label for="nombre_post">Título del Post</label>
+                <label for="nombre_post">Título de la Publicación</label>
                 <input type="text" name="nombre_post">
             </div>
             <div>
                 <label for="descripcion_post">Descripción</label>
                 <textarea name="descripcion_post"></textarea>
             </div>
-            <button>Crear Post</button>
+            <button>Crear Publicación</button>
         </form>
     </div>
 </body>

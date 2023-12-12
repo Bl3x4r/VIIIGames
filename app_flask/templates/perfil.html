@@ -43,6 +43,12 @@
                     
                     <div class="publicaciones">
                         <h1>Tus Publicaciones</h1>
+                        {% if posts_perfil|length == 0 %}
+                            <h2>No tienes publicaciones...</h2>
+                            <form action="/crear/post" method="GET">
+                                <Button type="submit">Crea una publicación</Button>
+                            </form>
+                        {% endif %}
                         {% for i in posts_perfil %}
                             <div class="dash-post">
                                 <div class="dp-left">

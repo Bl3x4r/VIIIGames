@@ -110,6 +110,7 @@ nav{
 .cuerpo-btm{
     display: flex;
     gap: 20px;
+    justify-content: space-between;
 }
 .btm-izq{
     display: flex;
@@ -118,7 +119,7 @@ nav{
 }
 .btm-der{
     display: flex;
-    flex: 1;
+    width: 500px;
 }
 .publicaciones{
     display: flex;
@@ -212,4 +213,8 @@ height: 30px;
     flex: 1;
     justify-content: center;
     align-items: center;
+}
+.publicaciones Button{
+    font-weight: 700;
+    box-shadow: 1px 1px 1px 1px #BEBEBE;
 }
