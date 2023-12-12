@@ -38,3 +38,9 @@ def ver_mensajes():
 @app.route('/chat')
 def desplegar_chat():
     return render_template('chat.html')
+
+#EVENTOS
+
+@app.route('/eventos')
+def renderizar_dashboard_eventos():
+    return render_template('eventos.html')
