@@ -33,7 +33,7 @@ button {
 */
 .logo{
     height: 75px;
-    border-radius: 20px;
+    
 }
 
 nav{
@@ -67,7 +67,7 @@ nav{
 }
 .item{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .cont-perfil-btn{
     display: flex;
@@ -85,7 +85,14 @@ nav{
 }
 .cuerpo-top{
     display: flex;
+    justify-content: flex-end;
 }
+.crear-btn{
+    box-shadow: 2px 2px #BEBEBE;
+    font-weight: 600;
+    font-size: 20px;
+}
+
 .cuerpo-btm{
     display: flex;
     flex-direction: column;
@@ -93,12 +100,12 @@ nav{
 }
 .dash-post{
     display: flex;
-    flex-direction: column;
     background-color: #f88f3e;
     border:#ebbe6b solid;
     border-radius: 20px;
     box-shadow: 2px 2px #BEBEBE;
     padding: 8px;
+    gap: 10px;
 }
 .dp-left{
     display: flex;
@@ -126,8 +133,10 @@ hr{
 .dp-right{
     display: flex;
     flex-grow: 1;
+    padding: 10px;
     justify-content: space-between;
     background-color: antiquewhite;
+    border-radius: 20px;
 }
 .dp-td{
     display: flex;
@@ -139,6 +148,10 @@ hr{
 .dp-td-tf{
     display: flex;
     justify-content: space-between;
+}
+.dp-td-tf a{
+    text-decoration: none;
+    color: #333;
 }
 .dp-dc{
     display: flex;

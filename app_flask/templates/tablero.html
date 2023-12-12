@@ -11,7 +11,8 @@
 </head>
 <nav>
     <div class="cont_izq">
-        <h1>Dashboard</h1>
+        <img src="{{url_for('static', filename='img/logo.png')}}" alt="Logo de VIIIGames" class="img logo">
+        <h1>Publicaciones</h1>
     </div>
     <div class="cont_der">
         <ul class="lista">
@@ -31,7 +32,9 @@
     <div class="cuerpo">
         <div class="cuerpo-top">
             <div class="crear-post">
-                <a href="/crear/post">Crear Post</a>
+                <form action="/crear/post">
+                    <button type="submit" class="crear-btn">Crear Publicación</button>
+                </form>
             </div>
         </div>
         <div class="cuerpo-btm">
@@ -48,7 +51,7 @@
                     <div class="dp-right">
                         <div class="dp-td">
                             <div class="dp-td-tf"> 
-                                <h2>{{ i.nombre_post }}</h2>
+                                <a href="#"><h2>{{ i.nombre_post }}</h2></a>
                                 <span>Creado el  {{ i.fecha_creacion }}</span>
                             </div>
                             <div class="dp-dc">
@@ -62,6 +65,33 @@
                     </div>
                 </div>
             {% endfor %}
+            <div class="dash-post">
+                <div class="dp-left">
+                    <div class="dp-left-top">
+                        <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                        <p>EstrategaMaster</p>
+                    </div>
+                    <p>2023-12-08 09:00:00</p>
+                </div>
+                <hr>
+                <div class="dp-right">
+                    <div class="dp-td">
+                        <div class="dp-td-tf">
+                            <a href="/post/1"><h2>Consejos para Ganar en Juegos de Estrategia</h2></a>
+                            <span>Creado el 2023-12-08 09:00:00</span>
+                        </div>
+                        <div class="dp-dc">
+                            <p>¿Eres fanático de los juegos de estrategia? Comparto algunos consejos que he 
+                                aprendido a lo largo de los años. Desde juegos de mesa hasta estrategias en 
+                                línea, ¡vamos a discutir cómo dominar el arte de la estrategia!</p>
+                            <div class="dp-comentarios">
+                                <img src="{{url_for('static', filename='img/icono_comentarios.png')}}" alt="Ícono Comentarios">
+                                <span>7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
