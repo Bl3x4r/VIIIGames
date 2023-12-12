@@ -92,7 +92,54 @@
                     </div>
                 </div>
             </div>
+            <div class="dash-post">
+                <div class="dp-left">
+                    <div class="dp-left-top">
+                        <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                        <p>DadosyTableros</p>
+                    </div>
+                    <p>2023-12-10 18:00:00</p>
+                </div>
+                <hr>
+                <div class="dp-right">
+                    <div class="dp-td">
+                        <div class="dp-td-tf">
+                            <a href="/post/EstrategaMaster/1"><h2>Reseña de Último Juego de Mesa: "El Laberinto Mágico"</h2></a>
+                            <span>Creado el 2023-12-08 09:00:00</span>
+                        </div>
+                        <div class="dp-dc">
+                            <p>Acabo de jugar a "El Laberinto Mágico" y quiero compartir mi opinión. Este juego 
+                                de estrategia y magia es una joya. ¿Alguien más lo ha probado? ¡Hablemos de 
+                                nuestras experiencias!</p>
+                            <div class="dp-comentarios">
+                                <img src="{{url_for('static', filename='img/icono_comentarios.png')}}" alt="Ícono Comentarios">
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <footer>
+        <div class="titulo-footer">
+            <h2>Nosotros</h2>
+        </div>
+        <div class="cont cont-footer">
+            <div class="cont cont-footer-izq">
+                <h3 class="titulo-footer">Contactanos</h3>
+                <ul class="list list-footer">
+                    <li><a href="#" class="item item-footer">Conviertete en Socio</a></li>
+                    <li><a href="/conocer/equipo" class="item item-footer">Conoce al equipo</a></li>
+                </ul>
+            </div>
+            <div class="cont cont-footer-der">
+                <h3 class="titulo-footer">Acerca de Nosotros</h3>
+                <ul class="list list-footer">
+                    <li><a href="/mision" class="item item-footer">Misión</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

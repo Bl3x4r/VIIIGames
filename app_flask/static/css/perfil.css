@@ -66,7 +66,7 @@ nav{
 }
 .item{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .cont-perfil-btn{
     display: flex;
@@ -85,17 +85,42 @@ nav{
 .cuerpo-top{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: 10px;
 }
-.cuerpo-top img{
+.imagen-top{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.imagen-top img{
     height: 80px;
     border-radius: 50%;
     border: 5px solid whitesmoke;
 }
 .nombre-descripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #f88f3e;
+    justify-content: center;
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
 }
 .cuerpo-btm{
+    display: flex;
+    gap: 20px;
+}
+.btm-izq{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+.btm-der{
+    display: flex;
+    flex: 1;
+}
+.publicaciones{
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -107,6 +132,7 @@ nav{
     border-radius: 20px;
     box-shadow: 2px 2px #BEBEBE;
     padding: 8px;
+    gap: 10px;
 }
 .dp-left{
     display: flex;
@@ -139,8 +165,11 @@ hr{
 }
 .dp-right{
     display: flex;
-    flex-direction: column;
-    flex: 1;
+    flex-grow: 1;
+    padding: 10px;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    border-radius: 20px;
 }
 .dp-td{
     display: flex;
@@ -165,4 +194,22 @@ hr{
 }
 .dp-comentarios img{
 height: 30px;
+}
+.seguidores{
+    display: flex;
+    flex-direction: column;
+    background-color: #f88f3e;
+    flex: 1;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    height: 150px;
+}
+.seguidores-in{
+    display: flex;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
 }

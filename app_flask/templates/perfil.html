@@ -30,42 +30,60 @@
 <body>
     <div class="cuerpo">
             <div class="cuerpo-top"> <!-- aquí va el nombre de usuario, foto, portada y fecha de unión-->
-                <div>
+                <div class="imagen-top">
                     <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
                 </div>
                 <div class="nombre-descripcion">
                     <h1> {{ usuario_perfil.nombre_usuario }} </h1>
+                    <p>Usuario desde: 2022-04-06</p>
                 </div>
             </div>
             <div class="cuerpo-btm">
-                <h1>Tus Publicaciones</h1>
-                {% for i in posts_perfil %}
-                    <div class="dash-post">
-                        <div class="dp-left">
-                            <div class="dp-left-top">
-                                <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
-                                <p>{{ i.usuario.nombre_usuario }}</p>
-                            </div>
-                            <p>{{ i.usuario.fecha_creacion }}</p>
-                        </div>
-                        <hr>
-                        <div class="dp-right">
-                            <div class="dp-td">
-                                <div class="dp-td-tf"> 
-                                    <h2>{{ i.nombre_post }}</h2>
-                                    <span>Creado el  {{ i.fecha_creacion }}</span>
+                <div class="btm-izq">
+                    <div class="usuario-descripcion">
+                        <h1>Descripcion</h1>
+                    </div>
+                    <div class="publicaciones">
+                        <h1>Tus Publicaciones</h1>
+                        {% for i in posts_perfil %}
+                            <div class="dash-post">
+                                <div class="dp-left">
+                                    <div class="dp-left-top">
+                                        <img src="{{url_for('static', filename='img/foto_perfil.png')}}" alt="Imagen usuario" class="publicacion-usuario-imagen">
+                                        <p>{{ i.usuario.nombre_usuario }}</p>
+                                    </div>
+                                    <p>{{ i.usuario.fecha_creacion }}</p>
                                 </div>
-                                <div class="dp-dc">
-                                    <p>{{ i.descripcion_post }}</p>
-                                    <div class="dp-comentarios">
-                                        <img src="{{url_for('static', filename='img/icono_comentarios.png')}}" alt="Ícono Comentarios">
-                                        {{ i.num_comentarios }}
+                                <hr>
+                                <div class="dp-right">
+                                    <div class="dp-td">
+                                        <div class="dp-td-tf"> 
+                                            <h2>{{ i.nombre_post }}</h2>
+                                            <span>Creado el  {{ i.fecha_creacion }}</span>
+                                        </div>
+                                        <div class="dp-dc">
+                                            <p>{{ i.descripcion_post }}</p>
+                                            <div class="dp-comentarios">
+                                                <img src="{{url_for('static', filename='img/icono_comentarios.png')}}" alt="Ícono Comentarios">
+                                                {{ i.num_comentarios }}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        {% endfor %}
+                    </div>
+                    
+                </div>
+                <div class="btm-der">
+                    <div class="seguidores">
+                        <h2>Seguidores</h2>
+                        <div class="seguidores-in">
+                            <h2>No Tienes Seguidores...</h2>
                         </div>
                     </div>
-                {% endfor %}
+                </div>
+                
             </div>
     </div>
 </body>

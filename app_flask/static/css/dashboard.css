@@ -167,3 +167,44 @@ hr{
 height: 30px;
 }
 
+/* 
+
+    Footer de la Pagina
+
+*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border-top: 2px solid #EAD94C;
+    background-color: #56351E;
+    color: #fff;
+}
+.titulo-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    font-size: 1.5rem;
+}
+.cont, .cont-footer-izq,.cont-footer-der{
+    display: flex;
+    justify-content: space-around;
+}
+.cont-footer-izq, .cont-footer-der{
+    padding: 8px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+} 
+.item-footer{
+    color: #fff;
+}
+
+.list-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
